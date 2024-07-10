@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Voting Page</title>
+  <style>
+    /* Add your custom styles here */
+    .container {
+      background-color:#899499; /* Adjust background color as needed */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .sub-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+    }
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    img {
+      max-width: 90px;
+      max-height: 90px;
+    }
+    .submit-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .navbar-brand {
+      position: absolute;
+      right: 25px;}
+      .container-fluid{
+      left:25px;
+      background-color: #899499;}
+      .tagline {
+      font-size: 30px;
+      color: black;
+      margin-top: 10px; /* Adjust the margin as needed */
+      font-weight: bold;
+      font-style:arial;
+    }
+    .navbar {
+       /* Set navbar position to fixed */
+  top: 0; /* Position navbar at the top of the window */
+  width: 100%; /* Set navbar width to 100% */
+  margin-top: 0px;
+  font-weight: bold;
+  height: 70px;
+  line-height: 80px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-auto" href="#">ClickToCast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="margin-left: 680px;">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Your content for the voting page goes here -->
+  <div class="container mt-3">
+    <h1 class="text-center mb-4">Online Voting System</h1>
+
+    <div class="sub-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Vote</th>
+            <th>Team Name</th>
+            <th>Symbol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="radio" name="vote" value="Wheel"></td>
+            <td>Wheel</td>
+            <td><img src="https://img.freepik.com/premium-vector/flat-car-wheeltire-style-sport-vector_632607-17.jpg" alt="Team 1 Symbol"></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="vote" value="Team 2"></td>
+            <td>Bike</td>
+            <td><img src="https://t.pimg.jp/106/812/416/1/106812416.jpg" alt="Team 2 Symbol"></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="vote" value="Team 3"></td>
+            <td>Auto</td>
+            <td><img src="https://www.shutterstock.com/shutterstock/photos/2127327227/display_1500/stock-vector-auto-rickshaw-vehicle-hand-drawn-cartoon-vector-2127327227.jpg" alt="Team 3 Symbol"></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="vote" value="Team 4"></td>
+            <td>Comb</td>
+            <td><img src="https://t3.ftcdn.net/jpg/01/76/37/60/360_F_176376037_lSYX2vXFhY9FzVQ1MF9esSNdoCSgXpM9.jpg" alt="Team 4 Symbol"></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="vote" value="Team 5"></td>
+            <td>Pen</td>
+            <td><img src="https://t4.ftcdn.net/jpg/01/51/79/45/360_F_151794576_giCjlBaCOQVIBd9p7VE6BQmZOqV38Lte.jpg" alt="Team 5 Symbol"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+
+
+  <!-- Bootstrap JavaScript (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<div class="submit-btn">
+<button class="btn btn-primary" onclick="submitVote()">Submit Vote</button>
+</div>
+</div>
+
+<!-- Bootstrap JavaScript (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function submitVote() {
+  const selectedVote = document.querySelector('input[name="vote"]:checked');
+  if (selectedVote) {
+    const selectedValue = selectedVote.value;
+    alert("Vote submitted successfully for " + selectedValue + "!");
+  } else {
+    alert("Please select a vote before submitting.");
+  }
+}
+</script>
+</body>
+</html>
